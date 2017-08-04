@@ -10,13 +10,22 @@
 #### Gradle
 
 ```java
-compile ''
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+依赖：
+```java
+compile 'compile 'com.github.looa:Gallery:0.0.1''
 ```
 
 > 注意：如果你的项目已经引用了 `RecyclerView` ，那么应该这样引用，而且你的 `RecyclerView` 的引用版本必须大于等于 25.1.0
 
 ```java
-compile (''){
+compile ('compile 'com.github.looa:Gallery:0.0.1''){
     exclude group: 'com.android.support', module:'recyclerview-v7'
 }
 ```
